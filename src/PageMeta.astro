@@ -1,0 +1,77 @@
+---
+import type { IPageMeta } from './IPageMeta.interface';
+
+interface Props extends IPageMeta {}
+
+const {
+    author = 'Kai Orion',
+    sitemap = '/sitemap-index.xml',
+    robots = 'index, follow',
+    title,
+    description,
+    generator = Astro.generator,
+    keywords = 'kai orion, sandlada',
+    ogDescription,
+    ogImageAlt,
+    ogTitle,
+    ogType = 'website',
+    ogUrl,
+    ogImage,
+    ogLocale = 'en-US',
+    ogSiteName,
+    twitterCard = 'summary_large_image',
+    twitterDescription,
+    twitterImageAlt,
+    twitterTitle,
+    twitterImage,
+    imageAlt,
+    icon,
+    image,
+    url,
+    referrer = 'strict-origin-when-cross-origin',
+    colorScheme = 'light dark',
+    themeColorDark = '#000000',
+    themeColorLight = '#ffffff',
+    themeColorLightMedia = '(prefers-color-scheme: light)',
+    themeColorDarkMedia = '(prefers-color-scheme: dark)',
+    applicationName,
+} = Astro.props;
+---
+
+<title>{title ?? 'Untitled Page'}</title>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<meta name="generator" content={generator} />
+<meta name="keywords" content={keywords} />
+<meta name="robots" content={robots} />
+<meta name="referrer" content={referrer} />
+{applicationName && <meta name="application-name" content={applicationName} />}
+
+<meta name="color-scheme" content={colorScheme} />
+<meta name="theme-color" content={themeColorLight} media={themeColorLightMedia} />
+<meta name="theme-color" content={themeColorDark} media={themeColorDarkMedia} />
+
+{url && <link rel="canonical" href={url} />}
+
+<link rel="sitemap" href={sitemap} />
+{icon && <link rel="icon" type="image/svg+xml" href={icon.src} />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={ogTitle ?? title} />
+<meta property="og:description" content={ogDescription ?? description} />
+<meta property="og:site_name" content={ogSiteName ?? title} />
+<meta property="og:locale" content={ogLocale} />
+{(ogUrl || url) && <meta property="og:url" content={ogUrl ?? url} />}
+{(ogImage || image || ogImageAlt || imageAlt) && <meta property="og:image:alt" content={ogImageAlt ?? imageAlt} />}
+{(ogImage || image) && <meta property="og:image" content={ogImage?.src ?? image?.src} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={twitterTitle ?? title} />
+<meta name="twitter:description" content={twitterDescription ?? description} />
+{(twitterImage || image || twitterImageAlt || imageAlt) && <meta name="twitter:image:alt" content={twitterImageAlt ?? imageAlt} />}
+{(twitterImage || image) && <meta name="twitter:image" content={twitterImage?.src ?? image?.src} />}

@@ -1,0 +1,61 @@
+---
+import PageMeta from '../PageMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="Test Page Title"
+            description="This is a test description for the PageMeta component."
+            author="Kai Orion"
+            keywords="test, astro, page meta, sandlada"
+            robots="index, follow"
+            referrer="strict-origin-when-cross-origin"
+            sitemap="/sitemap-index.xml"
+            url="https://example.com/test"
+            colorScheme="light dark"
+            themeColorLight="#ffffff"
+            themeColorLightMedia="(prefers-color-scheme: light)"
+            themeColorDark="#000000"
+            themeColorDarkMedia="(prefers-color-scheme: dark)"
+            applicationName="Test App"
+            ogType="website"
+            ogTitle="Test OG Title"
+            ogDescription="Test OG description for social sharing."
+            ogUrl="https://example.com/test"
+            ogLocale="en-US"
+            ogSiteName="Test Site"
+            twitterCard="summary_large_image"
+            twitterTitle="Test Twitter Title"
+            twitterDescription="Test Twitter description for card."
+        />
+    </head>
+    <body>
+        <h1>PageMeta Component Test</h1>
+        <p>Inspect the &lt;head&gt; in DevTools to verify all meta tags are rendered correctly.</p>
+        <ul>
+            <li><strong>title</strong>: Test Page Title</li>
+            <li><strong>description</strong>: This is a test description for the PageMeta component.</li>
+            <li><strong>author</strong>: Kai Orion</li>
+            <li><strong>keywords</strong>: test, astro, page meta, sandlada</li>
+            <li><strong>robots</strong>: index, follow</li>
+            <li><strong>referrer</strong>: strict-origin-when-cross-origin</li>
+            <li><strong>sitemap</strong>: /sitemap-index.xml</li>
+            <li><strong>url (canonical)</strong>: https://example.com/test</li>
+            <li><strong>colorScheme</strong>: light dark</li>
+            <li><strong>themeColorLight</strong>: #ffffff</li>
+            <li><strong>themeColorDark</strong>: #000000</li>
+            <li><strong>applicationName</strong>: Test App</li>
+            <li><strong>og:type</strong>: website</li>
+            <li><strong>og:title</strong>: Test OG Title</li>
+            <li><strong>og:description</strong>: Test OG description for social sharing.</li>
+            <li><strong>og:url</strong>: https://example.com/test</li>
+            <li><strong>og:locale</strong>: en-US</li>
+            <li><strong>og:site_name</strong>: Test Site</li>
+            <li><strong>twitter:card</strong>: summary_large_image</li>
+            <li><strong>twitter:title</strong>: Test Twitter Title</li>
+            <li><strong>twitter:description</strong>: Test Twitter description for card.</li>
+        </ul>
+    </body>
+</html>
