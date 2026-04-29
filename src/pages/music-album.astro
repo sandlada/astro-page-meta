@@ -1,0 +1,44 @@
+---
+import PageMeta from '../PageMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="SoundHelix Sample Album — Public MP3 Collection"
+            description="A public collection of SoundHelix sample MP3 tracks for metadata testing."
+            url="https://www.soundhelix.com/"
+            ogType="music:album"
+            ogTitle="SoundHelix Sample Album"
+            ogDescription="A public collection of SoundHelix sample MP3 tracks."
+            ogUrl="https://www.soundhelix.com/"
+            ogLocale="en-US"
+            ogSiteName="SoundHelix"
+            ogImage="https://placehold.co/1200x630/png?text=SoundHelix+Album"
+            ogMusicSong={[
+                'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+                'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+            ]}
+            ogMusicSongDisc={1}
+            ogMusicSongTrack={3}
+            ogMusicMusician={['https://www.soundhelix.com/']}
+            ogMusicReleaseDate="2010-01-01"
+            twitterCard="summary_large_image"
+            twitterSite="@soundhelix"
+            twitterImage="https://placehold.co/1200x630/png?text=SoundHelix+Album"
+        />
+    </head>
+    <body>
+        <h1>og:type = music:album</h1>
+        <ul>
+            <li><strong>Subject</strong>: SoundHelix sample album</li>
+            <li><strong>og:type</strong>: music:album</li>
+            <li><strong>music:song</strong>: 3 SoundHelix public MP3 URLs</li>
+            <li><strong>music:song:disc</strong>: 1 / <strong>music:song:track</strong>: 3</li>
+            <li><strong>music:musician</strong>: https://www.soundhelix.com/</li>
+            <li><strong>music:release_date</strong>: 2010-01-01</li>
+        </ul>
+    </body>
+</html>

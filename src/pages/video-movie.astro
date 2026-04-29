@@ -1,0 +1,54 @@
+---
+import PageMeta from '../PageMeta.astro';
+
+// ogVideo: Big Buck Bunny — Blender Foundation, CC-BY (Wikimedia Commons)
+const ogVideoData = {
+    ogVideoUrl:       'https://commons.wikimedia.org/wiki/Special:Redirect/file/Big_Buck_Bunny_4K.webm',
+    ogVideoSecureUrl: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Big_Buck_Bunny_4K.webm',
+    ogVideoType:      'video/webm',
+    ogVideoWidth:     854,
+    ogVideoHeight:    480,
+};
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="Big Buck Bunny — Blender Foundation | Wikimedia Commons"
+            description="Big Buck Bunny is a 2008 open-source animated short film produced by the Blender Foundation, released under the Creative Commons Attribution license."
+            url="https://commons.wikimedia.org/wiki/File:Big_Buck_Bunny_4K.webm"
+            ogType="video.movie"
+            ogTitle="Big Buck Bunny (2008)"
+            ogDescription="An open-source animated short film by the Blender Foundation — CC-BY licensed."
+            ogUrl="https://commons.wikimedia.org/wiki/File:Big_Buck_Bunny_4K.webm"
+            ogLocale="en-US"
+            ogSiteName="Wikimedia Commons"
+            ogImage="https://placehold.co/1200x630/png?text=Big+Buck+Bunny"
+            ogVideo={ogVideoData}
+            ogVideoActor={['https://www.blender.org/', 'https://en.wikipedia.org/wiki/Big_Buck_Bunny']}
+            ogVideoActorRole={['Production', 'Director of Photography']}
+            ogVideoDirector={['https://en.wikipedia.org/wiki/Blender_Foundation']}
+            ogVideoWriter={['https://www.blender.org/']}
+            ogVideoDuration={596}
+            ogVideoReleaseDate="2008-04-10"
+            ogVideoTag={['Animation', 'Open Source', 'Blender', 'Creative Commons']}
+            twitterCard="summary_large_image"
+            twitterSite="@Wikimedia"
+            twitterImage="https://placehold.co/1200x630/png?text=Big+Buck+Bunny"
+        />
+    </head>
+    <body>
+        <h1>og:type = video.movie</h1>
+        <ul>
+            <li><strong>Subject</strong>: Big Buck Bunny (2008) — Blender Foundation, CC-BY</li>
+            <li><strong>og:type</strong>: video.movie</li>
+            <li><strong>og:video</strong>: Wikimedia Commons WebM 480p direct file</li>
+            <li><strong>video:actor</strong>: blender.org, Sacha Goedegebure (Wikipedia URLs)</li>
+            <li><strong>video:director</strong>: Sacha Goedegebure</li>
+            <li><strong>video:duration</strong>: 596 seconds</li>
+            <li><strong>video:release_date</strong>: 2008-04-10</li>
+            <li><strong>video:tag</strong>: [Animation, Open Source, Blender, Creative Commons]</li>
+        </ul>
+    </body>
+</html>

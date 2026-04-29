@@ -1,0 +1,40 @@
+---
+import PageMeta from '../PageMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="SoundHelix Song 1 — Public Sample MP3"
+            description="SoundHelix provides free sample MP3 tracks for testing audio playback and metadata."
+            url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            ogType="music:song"
+            ogTitle="SoundHelix Song 1"
+            ogDescription="Public sample MP3 track from SoundHelix."
+            ogUrl="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            ogLocale="en-US"
+            ogSiteName="SoundHelix"
+            ogImage="https://placehold.co/1200x630/png?text=SoundHelix+Song+1"
+            ogMusicDuration={300}
+            ogMusicAlbum={['https://www.soundhelix.com/']}
+            ogMusicAlbumDisc={1}
+            ogMusicAlbumTrack={1}
+            ogMusicMusician={['https://www.soundhelix.com/']}
+            twitterCard="summary"
+            twitterSite="@soundhelix"
+            twitterImage="https://placehold.co/1200x630/png?text=SoundHelix+Song+1"
+        />
+    </head>
+    <body>
+        <h1>og:type = music:song</h1>
+        <ul>
+            <li><strong>Subject</strong>: SoundHelix Song 1 — public sample MP3</li>
+            <li><strong>og:type</strong>: music:song</li>
+            <li><strong>music:duration</strong>: 300 seconds</li>
+            <li><strong>music:album</strong>: https://www.soundhelix.com/</li>
+            <li><strong>music:album:disc</strong>: 1 / <strong>music:album:track</strong>: 1</li>
+            <li><strong>music:musician</strong>: https://www.soundhelix.com/</li>
+        </ul>
+    </body>
+</html>

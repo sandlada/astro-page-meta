@@ -1,0 +1,42 @@
+---
+import PageMeta from '../PageMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="Donate to Wikimedia Foundation"
+            description="Support free knowledge. The Wikimedia Foundation is a nonprofit that hosts Wikipedia and other free knowledge projects worldwide."
+            url="https://donate.wikimedia.org/"
+            ogType="payment:link"
+            ogTitle="Donate to Wikimedia Foundation"
+            ogDescription="Support Wikipedia and free knowledge worldwide. Every donation helps."
+            ogUrl="https://donate.wikimedia.org/"
+            ogLocale="en-US"
+            ogSiteName="Wikimedia Foundation"
+            ogImage="https://placehold.co/1200x630/png?text=Wikimedia+Foundation"
+            ogPaymentDescription="Wikimedia Foundation — Annual Fundraiser"
+            ogPaymentCurrency="USD"
+            ogPaymentAmount={5.00}
+            ogPaymentExpiresAt="2026-12-31T23:59:59Z"
+            ogPaymentStatus="PENDING"
+            ogPaymentId="wmf-2026-annual"
+            ogPaymentSuccessUrl="https://donate.wikimedia.org/wiki/Thank_You"
+            twitterCard="summary"
+            twitterSite="@Wikimedia"
+        />
+    </head>
+    <body>
+        <h1>og:type = payment:link</h1>
+        <ul>
+            <li><strong>Subject</strong>: Wikimedia Foundation donation page</li>
+            <li><strong>og:type</strong>: payment:link</li>
+            <li><strong>payment:description</strong>: Wikimedia Foundation — Annual Fundraiser</li>
+            <li><strong>payment:currency</strong>: USD / <strong>payment:amount</strong>: 5</li>
+            <li><strong>payment:expires_at</strong>: 2026-12-31T23:59:59Z</li>
+            <li><strong>payment:status</strong>: PENDING / <strong>payment:id</strong>: wmf-2026-annual</li>
+            <li><strong>payment:success_url</strong>: https://donate.wikimedia.org/wiki/Thank_You</li>
+        </ul>
+    </body>
+</html>

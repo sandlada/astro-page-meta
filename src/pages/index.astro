@@ -1,61 +1,80 @@
 ---
 import PageMeta from '../PageMeta.astro';
+
+// ogImage as IOpenGraphImageArgs object (full sub-properties)
+// Image: Astro official Open Graph image (publicly accessible)
+const ogImageData = {
+    ogImageUrl:       'https://astro.build/og/social.jpg',
+    ogImageSecureUrl: 'https://astro.build/og/social.jpg',
+    ogImageType:      'image/jpeg',
+    ogImageWidth:     1200,
+    ogImageHeight:    630,
+    ogImageAlt:       'Astro — the web framework for content-driven websites',
+};
+
+// ogAudio: public domain recording from Internet Archive
+const ogAudioData = {
+    ogAudioUrl:  'https://ia800605.us.archive.org/8/items/tsp2009-09-26.flac16/tsp2009-09-26t01.mp3',
+    ogAudioType: 'audio/mpeg',
+};
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <PageMeta
-            title="Test Page Title"
-            description="This is a test description for the PageMeta component."
+            title="Astro — The Web Framework for Content-Driven Websites"
+            description="Astro is the all-in-one web framework designed for speed. Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries."
             author="Kai Orion"
-            keywords="test, astro, page meta, sandlada"
+            keywords="astro, web framework, static site, content-driven, og:website"
             robots="index, follow"
             referrer="strict-origin-when-cross-origin"
             sitemap="/sitemap-index.xml"
-            url="https://example.com/test"
+            url="https://astro.build/"
             colorScheme="light dark"
             themeColorLight="#ffffff"
             themeColorLightMedia="(prefers-color-scheme: light)"
             themeColorDark="#000000"
             themeColorDarkMedia="(prefers-color-scheme: dark)"
-            applicationName="Test App"
+            applicationName="Astro"
             ogType="website"
-            ogTitle="Test OG Title"
-            ogDescription="Test OG description for social sharing."
-            ogUrl="https://example.com/test"
+            ogTitle="Astro — The Web Framework for Content-Driven Websites"
+            ogDescription="Astro is the all-in-one web framework designed for speed."
+            ogUrl="https://astro.build/"
             ogLocale="en-US"
-            ogSiteName="Test Site"
+            ogLocaleAlternate={['zh-TW', 'ja-JP']}
+            ogSiteName="Astro"
+            ogDeterminer="the"
+            ogImage={ogImageData}
+            ogAudio={ogAudioData}
             twitterCard="summary_large_image"
-            twitterTitle="Test Twitter Title"
-            twitterDescription="Test Twitter description for card."
+            twitterSite="@astrodotbuild"
+            twitterCreator="@astrodotbuild"
+            twitterTitle="Astro — The Web Framework for Content-Driven Websites"
+            twitterDescription="Pull your content from anywhere and deploy everywhere."
+            twitterImage="https://astro.build/og/social.jpg"
+            twitterImageAlt="Astro framework social card"
+            twitterLabel1="Stars on GitHub"
+            twitterData1="47k+"
+            twitterLabel2="Weekly downloads"
+            twitterData2="500k+"
         />
     </head>
     <body>
-        <h1>PageMeta Component Test</h1>
-        <p>Inspect the &lt;head&gt; in DevTools to verify all meta tags are rendered correctly.</p>
+        <h1>og:type = website</h1>
+        <p><a href="/article">article</a> | <a href="/profile">profile</a> | <a href="/book">book</a> | <a href="/video-movie">video.movie</a> | <a href="/video-episode">video.episode</a> | <a href="/video-tvshow">video.tv_show</a> | <a href="/video-other">video.other</a> | <a href="/music-song">music:song</a> | <a href="/music-album">music:album</a> | <a href="/music-playlist">music:playlist</a> | <a href="/music-radio">music:radio_station</a> | <a href="/payment">payment:link</a> | <a href="/twitter-player">twitter:player</a> | <a href="/twitter-app">twitter:app</a></p>
         <ul>
-            <li><strong>title</strong>: Test Page Title</li>
-            <li><strong>description</strong>: This is a test description for the PageMeta component.</li>
-            <li><strong>author</strong>: Kai Orion</li>
-            <li><strong>keywords</strong>: test, astro, page meta, sandlada</li>
-            <li><strong>robots</strong>: index, follow</li>
-            <li><strong>referrer</strong>: strict-origin-when-cross-origin</li>
-            <li><strong>sitemap</strong>: /sitemap-index.xml</li>
-            <li><strong>url (canonical)</strong>: https://example.com/test</li>
-            <li><strong>colorScheme</strong>: light dark</li>
-            <li><strong>themeColorLight</strong>: #ffffff</li>
-            <li><strong>themeColorDark</strong>: #000000</li>
-            <li><strong>applicationName</strong>: Test App</li>
             <li><strong>og:type</strong>: website</li>
-            <li><strong>og:title</strong>: Test OG Title</li>
-            <li><strong>og:description</strong>: Test OG description for social sharing.</li>
-            <li><strong>og:url</strong>: https://example.com/test</li>
-            <li><strong>og:locale</strong>: en-US</li>
-            <li><strong>og:site_name</strong>: Test Site</li>
+            <li><strong>og:url</strong>: https://astro.build/</li>
+            <li><strong>og:image</strong>: IOpenGraphImageArgs object — astro.build/og/social.jpg (1200×630)</li>
+            <li><strong>og:audio</strong>: IOpenGraphAudioArgs object — Internet Archive public domain MP3</li>
+            <li><strong>og:locale:alternate</strong>: zh-TW, ja-JP</li>
+            <li><strong>og:determiner</strong>: the</li>
             <li><strong>twitter:card</strong>: summary_large_image</li>
-            <li><strong>twitter:title</strong>: Test Twitter Title</li>
-            <li><strong>twitter:description</strong>: Test Twitter description for card.</li>
+            <li><strong>twitter:site</strong>: @astrodotbuild</li>
+            <li><strong>twitter:creator</strong>: @astrodotbuild</li>
+            <li><strong>twitter:label1 / twitter:data1</strong>: Stars on GitHub / 47k+</li>
+            <li><strong>twitter:label2 / twitter:data2</strong>: Weekly downloads / 500k+</li>
         </ul>
     </body>
 </html>

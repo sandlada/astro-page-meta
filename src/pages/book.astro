@@ -1,0 +1,55 @@
+---
+import PageMeta from '../PageMeta.astro';
+
+// ogImage as mixed array: one IOpenGraphImageArgs object + one plain URL string
+// Public placeholder covers for The Adventures of Sherlock Holmes.
+const ogImages = [
+    {
+        ogImageUrl:       'https://placehold.co/800x1200/png?text=The+Adventures+of+Sherlock+Holmes',
+        ogImageSecureUrl: 'https://placehold.co/800x1200/png?text=The+Adventures+of+Sherlock+Holmes',
+        ogImageType:      'image/png',
+        ogImageWidth:     800,
+        ogImageHeight:    1200,
+        ogImageAlt:       'The Adventures of Sherlock Holmes cover',
+    },
+    'https://placehold.co/400x600/png?text=Sherlock+Holmes',
+];
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="The Adventures of Sherlock Holmes — Wikipedia"
+            description="The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle."
+            url="https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes"
+            ogType="book"
+            ogTitle="The Adventures of Sherlock Holmes"
+            ogDescription="A collection of twelve short stories by Arthur Conan Doyle."
+            ogUrl="https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes"
+            ogLocale="en-US"
+            ogSiteName="Wikipedia"
+            ogImage={ogImages}
+            ogBookAuthor={['https://en.wikipedia.org/wiki/Arthur_Conan_Doyle']}
+            ogBookIsbn="978-3-16-148410-0"
+            ogBookReleaseDate="1892-10-14"
+            ogBookTag={['Fiction', 'Detective', 'Mystery', 'Short stories']}
+            twitterCard="summary_large_image"
+            twitterSite="@Wikipedia"
+            twitterImage="https://placehold.co/800x1200/png?text=The+Adventures+of+Sherlock+Holmes"
+            twitterImageAlt="The Adventures of Sherlock Holmes cover"
+        />
+    </head>
+    <body>
+        <h1>og:type = book</h1>
+        <ul>
+            <li><strong>Subject</strong>: The Adventures of Sherlock Holmes — Wikipedia</li>
+            <li><strong>og:type</strong>: book</li>
+            <li><strong>og:image</strong>: mixed array — public placeholder cover images</li>
+            <li><strong>book:author</strong>: Arthur Conan Doyle (Wikipedia URL)</li>
+            <li><strong>book:isbn</strong>: 978-3-16-148410-0</li>
+            <li><strong>book:release_date</strong>: 1892-10-14</li>
+            <li><strong>book:tag</strong>: [Fiction, Detective, Mystery, Short stories]</li>
+        </ul>
+    </body>
+</html>

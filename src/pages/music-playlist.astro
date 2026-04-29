@@ -1,0 +1,41 @@
+---
+import PageMeta from '../PageMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <PageMeta
+            title="SoundHelix Playlist — Public Sample Tracks"
+            description="A sample playlist built from SoundHelix public MP3 files."
+            url="https://www.soundhelix.com/"
+            ogType="music:playlist"
+            ogTitle="SoundHelix Playlist"
+            ogDescription="A sample playlist built from SoundHelix public MP3 files."
+            ogUrl="https://www.soundhelix.com/"
+            ogLocale="en-US"
+            ogSiteName="SoundHelix"
+            ogImage="https://placehold.co/1200x630/png?text=SoundHelix+Playlist"
+            ogMusicSong={[
+                'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+                'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+            ]}
+            ogMusicSongDisc={1}
+            ogMusicSongTrack={2}
+            ogMusicCreator={['https://www.soundhelix.com/']}
+            twitterCard="summary"
+            twitterSite="@soundhelix"
+            twitterImage="https://placehold.co/1200x630/png?text=SoundHelix+Playlist"
+        />
+    </head>
+    <body>
+        <h1>og:type = music:playlist</h1>
+        <ul>
+            <li><strong>Subject</strong>: SoundHelix playlist</li>
+            <li><strong>og:type</strong>: music:playlist</li>
+            <li><strong>music:song</strong>: 2 SoundHelix public MP3 URLs</li>
+            <li><strong>music:song:disc</strong>: 1 / <strong>music:song:track</strong>: 2</li>
+            <li><strong>music:creator</strong>: https://www.soundhelix.com/</li>
+        </ul>
+    </body>
+</html>
